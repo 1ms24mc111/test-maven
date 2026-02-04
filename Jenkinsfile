@@ -1,6 +1,10 @@
 pipeline
 {
 	agent any
+	tools {
+        jdk 'JDK17'   
+        maven 'maven' 
+    }
 	environment
 	{
 		DOCKER_CRED=credentials('dockerhub')
