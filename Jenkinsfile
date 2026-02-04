@@ -9,6 +9,8 @@ pipeline
 	{
 		DOCKER_CRED=credentials('dockerhub')
 		IMG_NAME=('vivek5041/maven-app')
+		 JAVA_HOME = "${tool 'JDK17'}"
+        PATH = "${env.JAVA_HOME}/bin:${env.PATH}"
 	}
 	stages
 	{
